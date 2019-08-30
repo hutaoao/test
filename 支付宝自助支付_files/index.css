@@ -17,9 +17,9 @@ a:hover{}
 	min-width:320px;max-width:640px;margin:0px auto;
 }
 .sub{display:none;}
-.bg_blue{
+/* .bg_blue{
 	background:#1c94f2;
-}
+} */
 .bg_blue .ico_suc span{
 	padding-left:1.2rem;
 }
@@ -33,7 +33,16 @@ a:hover{}
 	background:#62b359;
 }
 .selfpaid{
-	position:flex;height:100vh;width:100vw;top:0;left:0;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	cursor: default;
+	touch-action: none;
+	z-index: 9999;
+	background: red;
 }
 .bg_blue .container{
 	width:96%;margin:0px auto;background:#1c94f2;padding-top:0.5rem;
