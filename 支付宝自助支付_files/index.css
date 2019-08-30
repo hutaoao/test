@@ -1,0 +1,154 @@
+html,body{height:100%;width:100%;}
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,em,font,img,dl,dt,dd,ol,ul,li,fieldset,form,label,
+tbody,tfoot,thead,tr,th,td ,input{margin:0;padding:0;outline:0}
+a,fieldset,img{border:0;margin:0px;padding:0px;}
+:focus{outline:0}
+a,input,input:focus{ -webkit-tap-highlight-color:rgba(0,0,0,0);/*-webkit-user-modify:read-write-plaintext-only;*/}
+body{min-width:320px;font-family:"微软雅黑";}
+ol,ul{list-style:none}
+h1,h2,h3,h4,h5,h6,button,input,select,textarea{font-size:100%;font-weight:normal}
+table{border-collapse:collapse;border-spacing:0}
+input,button,img{vertical-align:middle}
+a{text-decoration:none;color:#000;cursor:pointer}
+a:hover{}
+.fix{*zoom:1}
+.fix:after{clear:both;content:" ";display:block;height:0;visibility:hidden;overflow:hidden}
+.wrap{
+	min-width:320px;max-width:640px;margin:0px auto;
+}
+.sub{display:none;}
+.bg_blue{
+	background:#1c94f2;
+}
+.bg_blue .ico_suc span{
+	padding-left:1.2rem;
+}
+.bg_blue .savebtn{
+	background:#03a9f5;
+}
+.bg_green{
+	background:#62b259;
+}
+.bg_green .savebtn{
+	background:#62b359;
+}
+.selfpaid{
+	position:relative;height:100%;top:0;
+}
+.bg_blue .container{
+	width:96%;margin:0px auto;background:#1c94f2;padding-top:0.5rem;
+}
+.bg_green .container{
+	width:96%;margin:0px auto;background:#62b259;padding-top:0.5rem;
+}
+.selfpaid .container .main{
+	background:#fff;padding-bottom:1rem;text-align:center;
+	border-radius:0.5rem;
+}
+.selfpaid .container .main .box{
+	width:92%;margin:0px auto;
+}
+.selfpaid .container .main .box .top{
+	height:3rem;line-height:3rem;border-bottom:1px solid #dadada;
+	font-size:1.2rem;
+}
+.selfpaid .container .main .box .cent{
+	padding:0rem 0rem 1rem;border-bottom:1px solid #dadada;
+}
+.selfpaid .container .main .box .cent p{
+	margin-top:1.2rem;
+}
+.selfpaid .container .main .box .cent .suc{
+	color:#666;font-size:1.15rem;
+}
+.selfpaid .container .main .box .cent .suc img{
+	width:1.5rem;height:1.5rem;margin-top:-0.2rem;margin-right:0.3rem;
+}
+.selfpaid .container .main .box .cent .money{
+	font-size:2.5rem;color:#000;
+}
+.selfpaid .container .main .box .cent .time{
+	font-size:0.8rem;color:#999;
+}
+.selfpaid .container .main .box .savebtn{
+	height:2.6rem;line-height:2.6rem;color:#fff;
+	width:100%;text-align:center;border:none;outline:0;
+	border-radius:5px;font-size:1.2rem;margin-top:2.5rem;
+}
+.selfpaid .container .main .box .img img{
+	width:100%;margin-top:1rem;
+}
+.selfpaid .bottom{
+	position:absolute;bottom:2rem;width:100%;left:0px;
+	text-align:center;
+}
+.selfpaid .bottom .addcar{
+	background:none;border:none;
+	color:#fff;text-decoration:underline;font-size:1rem;
+}
+.selfpaid .friend{
+	margin-top:2rem;
+}
+.selfpaid .friend .left{
+	float:left;
+	border:1px solid #dcdcdc;
+	width: 69%;
+}
+.selfpaid .friend .left img{
+	height: 4rem;
+	width: 4rem;
+	float:left;
+	padding: 0.6rem;
+}
+.selfpaid .friend .left .word{
+	padding-left:5.5rem;
+	font-size: 0.819rem;
+	color:#666;
+	text-align: left;
+	padding-top: 1.15rem;
+}
+.selfpaid .friend .left .word .p2{
+	font-size: 1.1rem;
+	margin-top:0.6rem;
+	color:#000;
+}
+.selfpaid .friend .right{
+	float:left;position:relative;
+	width:30%;
+	height: 5.32rem;
+}
+.selfpaid .friend .green{
+	background:#62b259;
+}
+.selfpaid .friend .blue{
+	background:#4eacf4;
+}
+.selfpaid .friend .right .drawgreenbtn,
+.selfpaid .friend .right .drawbluebtn{
+	height: 1.72rem;
+	line-height: 1.72rem;
+	width: 5.16rem;
+	background:#fff;
+	text-align:center;
+	color:#62b259;
+	font-size: 0.91rem;
+	margin: 1.2rem auto 0.5rem;
+	border: none;
+	border-radius: 1rem;
+}
+.selfpaid .friend .right .drawbluebtn{
+	color:#4eacf4;
+}
+.selfpaid .friend .right p{
+	font-size: 0.81rem;
+	color:#fff;
+	text-align:center;
+}
+.selfpaid .friend .right .greenline{
+	background:url(../img/greenline.png) no-repeat;
+	position:absolute;left:-3px;top:0;width:3px;height:100%;
+}
+.selfpaid .friend .right .blueline{
+	background:url(../img/blueline.png) no-repeat;
+	position:absolute;left:-3px;top:0;width:3px;height:100%;
+}

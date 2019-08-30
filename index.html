@@ -1,60 +1,138 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <style>
-        .box{
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            left: 0;
-            top: 0;
-            pointer-events: none;
-            cursor: default;
-            touch-action: none;
-            z-index: 9999;
-            background: red;
-        }
-    </style>
+
+<!-- saved from url=(0065)https://alipay.sdbspeed.com/index.php?g=Wap&m=Payfree&a=payReturn -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title> 支付宝自助支付</title>
+    
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="./支付宝自助支付_files/jquery.min.js.下载"></script>
+    <link rel="stylesheet" href="./支付宝自助支付_files/index.css">
+    <!--start edit yyb 2117.11.23-->
+    <!--<style type="text/css">-->
+    <!--.shop{-->
+    <!--position: relative;-->
+    <!--height: 180px;-->
+    <!--}-->
+    <!--.shop iframe{-->
+    <!--margin-top: 1rem;-->
+    <!--}-->
+    <!--</style>-->
+    <!--end yyb-->
 </head>
 <body>
-<div class="box">
+<div class="bg_blue selfpaid">
+<div class="container">
+    <div class="main">
+        <div class="box">
+            <div class="top"></div>
+            <div class="cent">
+                <p class="suc"><img src="./支付宝自助支付_files/ico_blue.png" alt=""><span>消费成功</span></p>
+                <p class="money">￥</p>
+                <p class="time">消费时间：</p>
+                            </div>
+                        <!--start edit yyb 2017.12.26-->
+            <!--<div class="img">-->
+            <!---->
+            <!--&lt;!&ndash;<a href="http://t.cn/RXu6vEv"> <img src="./tpl/Wap/default/common/51/img/welfare.png" alt=""></a>&ndash;&gt;-->
+            <!--<a href="https://web.u51.com/tregister/#/?id=7&channel=wdpt_yiling-882">-->
+            <!--<img class="clickRate" src=" ./tpl/Wap/default/common/51/img/welfare.png" alt=""></a>-->
+            <!---->
+            <!--</div>-->
 
+            <div class="img">
+                                <div class="shop">
+                    <iframe height="135px" width="100%" src="./支付宝自助支付_files/saved_resource.html" scrolling="no"></iframe>
+                    <!--<iframe height="135px" width="100%" src="https://papi.020leader.com/unipay/?service=unipay.acquire.adpay" scrolling="no"></iframe>-->
+                </div>
+                            </div>
+            <!--end yyb-->
+        </div>
+    </div>
 </div>
-</body>
+</div>
+<div style="display:none">
+<script type="text/javascript">
+    //禁止下拉
+    document.body.addEventListener('touchmove', function (e) {
+        e.preventDefault()
+    }, {passive: false});
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1276442355'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/z_stat.php%3Fid%3D1276442355' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1276442355"><a href="https://www.cnzz.com/stat/website.php?web_id=1276442355" target="_blank" title="站长统计">站长统计</a></span><script src="./支付宝自助支付_files/z_stat.php" type="text/javascript"></script><script src="./支付宝自助支付_files/core.php" charset="utf-8" type="text/javascript"></script>
+</div>
 
-<!-- <script>
-var overscroll = function(el) {
-  el.addEventListener('touchstart', function() {
-    var top = el.scrollTop
-      , totalScroll = el.scrollHeight
-      , currentScroll = top + el.offsetHeight
-    //If we're at the top or the bottom of the containers
-    //scroll, push up or down one pixel.
-    //
-    //this prevents the scroll from "passing through" to
-    //the body.
-    if(top === 0) {
-      el.scrollTop = 1
-    } else if(currentScroll === totalScroll) {
-      el.scrollTop = top - 1
+
+
+
+
+<!--处理积分-->
+<script>
+    $(function(){
+
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i)=="micromessenger") {
+            var openid = "";
+            var orderid="";
+            var token="";
+            var code="";
+            var price="";
+            var cid="";
+            var scroess="";
+            if(scoess==1)
+            {
+            }
+            else
+            {
+                memberPoints(token,openid,price,cid,code,orderid);
+                Integral(token,openid,price,cid,code,orderid);
+            }
+
+        }
+    });
+
+    function memberPoints(token,wecha_id,money,cid,code,orderid) {
+
+        $.ajax({
+            url: '/wxpay/index.php?g=Wap&m=WeixinfreeBank&a=memberPoints',
+            type: "get",
+            data: {token:token,wecha_id:wecha_id,money:money,cid:cid,code:code,orderid:orderid},
+            dataType: 'json',
+            success: function(obj) {
+
+
+            }
+        })
+
+
     }
-  })
-  el.addEventListener('touchmove', function(evt) {
-    //if the content is actually scrollable, i.e. the content is long enough
-    //that scrolling can occur
-    if(el.offsetHeight < el.scrollHeight)
-      evt._isScroller = true
-  })
-}
-overscroll(document.querySelector('.scroll'));
-document.body.addEventListener('touchmove', function(evt) {
-  //In this case, the default behavior is scrolling the body, which
-  //would result in an overflow.  Since we don't want that, we preventDefault.
-  if(!evt._isScroller) {
-    evt.preventDefault()
-  }
-})
-</script> -->
-</html>
+    function Integral(token,wecha_id,money,cid,code,orderid) {
+        $.ajax({
+            url: '/wxpay/index.php?g=Wap&m=WeixinfreeBank&a=Integral',
+            type: "get",
+            data: {token:token,wecha_id:wecha_id,money:money,cid:cid,code:code,orderid:orderid},
+            dataType: 'json',
+            success: function(obj) {
+
+
+            }
+        })
+
+
+    }
+</script>
+
+<!--点击次数统计-->
+<script>
+    $('.clickRate').click(function(){
+        var id = "";
+        var openid = "";
+        var type = "";
+        var url = "/index.php?g=Wap&m=Payfree&a=statistics";
+        if(id && openid && type){
+            var post_data = {
+                id: id,
+                openid: openid,
+                pay_type: type,
+            };
+            $.post(url,post_data,function(res){},'json');
+        }
+    });
+</script></body></html>
