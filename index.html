@@ -1,174 +1,77 @@
+
 <!-- saved from url=(0098)http://alipay.sdbspeed.com/wxpay/index.php?g=Wap&m=Wxcard&a=payinfo&token=cdqfld1554193847&id=1820 -->
-<html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <meta name="viewport"
-        content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <title>自助支付</title>
-    <script src="./index_files/jquery.min.js.下载"></script>
-    <link rel="stylesheet" href="./index_files/base_6cd9ad9fdb.css" onerror="_cdnFallback(this)">
-    <link rel="stylesheet" href="./index_files/cashier_17e81cd08f.css" onerror="_cdnFallback(this)">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>自助支付</title>
+<script src="./index_files/jquery.min.js.下载"></script>
+<link rel="stylesheet" href="./index_files/base_6cd9ad9fdb.css" onerror="_cdnFallback(this)">        
+<link rel="stylesheet" href="./index_files/cashier_17e81cd08f.css" onerror="_cdnFallback(this)">
 </head>
-
 <body class=" ">
 
     <div class="container " style="min-height: 574px;">
-        <div class="content">
+                <div class="content">
             <div class="paid-status success">
-                <div class="header center">
-                    <h2><i class="success-icon"></i>订单支付成功</h2>
-                </div>
-                <div class="body block block-list">
-                    <div class="block-item">
-                        <h3>你的支付信息</h3>
-                    </div>
-                    <div class="block-item">
-                        <ul class="block form border-0">
-                            <li class="block-item">
-                                <label>付款金额：</label>
-                                <span class="price">￥</span>
-                            </li>
-                            <li class="block-item">
-                                <label>订单编号：</label>
-                                <span></span>
-                            </li>
-
-                            <li class="block-item">
-                                <label>支付方式：</label>
-                                <span>微信会员卡支付</span>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div>
-
-
-
-            </div>
-
-        </div>
+    <div class="header center">
+        <h2><i class="success-icon"></i>订单支付成功</h2>
     </div>
+    <div class="body block block-list">
+        <div class="block-item">
+            <h3>你的支付信息</h3>
+        </div>
+        <div class="block-item">
+            <ul class="block form border-0">
+                <li class="block-item">
+                    <label>付款金额：</label>
+                    <span class="price">￥</span>
+                </li>
+                <li class="block-item">
+                    <label>订单编号：</label>
+                    <span></span>
+                </li>
+
+                <li class="block-item">
+                    <label>支付方式：</label>
+                    <span>微信会员卡支付</span>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+    
+</div>
+    
+</div>    </div>
 
     <div class="footer" style="min-height: 86px;">
-        <div class="copyright">
-            <div style="font-size: 12px;padding: 50px 0 20px;text-align: center;">
-                <a style="color: #999;" href="http://alipay.020leader.com/" target="_blank">移领提供技术支持</a>
-            </div>
+<div class="copyright">
+<div style="font-size: 12px;padding: 50px 0 20px;text-align: center;">
+<a style="color: #999;" href="http://alipay.020leader.com/" target="_blank">移领提供技术支持</a>
+</div>
         </div>
     </div>
 
-    <!-- <script type="text/javascript">
-        //禁止下拉
-        document.body.addEventListener('touchmove', function (e) {
-            e.preventDefault()
-        }, { passive: false });
-    </script> -->
-    <script type="text/javascript">
-        $('.img_click').click(function () {
-            var token = $(this).parent().attr('token');
-            var href = "";
-            $.ajax({
-                type: "post",
-                url: '/wxpay/index.php?g=Wap&m=Payfree&a=adv_split',
-                data: { token: token },
-                dataType: "json",
-                success: function (data) {
-                    if (data.status == 200) {
-                        window.location.href = href;
-                    }
+<script type="text/javascript">
+    $('.img_click').click(function(){
+        var token = $(this).parent().attr('token');
+        var href = "";
+        $.ajax({
+            type: "post",
+            url: '/wxpay/index.php?g=Wap&m=Payfree&a=adv_split',
+            data: {token:token},
+            dataType: "json",
+            success: function(data){
+                if(data.status == 200){
+                    window.location.href = href;
                 }
-            });
-        })
-    </script>
-
-
-    <meta name="viewport"
-        content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <title>自助支付</title>
-    <script src="./index_files/jquery.min.js.下载"></script>
-    <link rel="stylesheet" href="./index_files/base_6cd9ad9fdb.css" onerror="_cdnFallback(this)">
-    <link rel="stylesheet" href="./index_files/cashier_17e81cd08f.css" onerror="_cdnFallback(this)">
-
-
-
-    <div class="container " style="min-height: 574px;">
-        <div class="content">
-            <div class="paid-status success">
-                <div class="header center">
-                    <h2><i class="success-icon"></i>订单支付成功</h2>
-                </div>
-                <div class="body block block-list">
-                    <div class="block-item">
-                        <h3>你的支付信息</h3>
-                    </div>
-                    <div class="block-item">
-                        <ul class="block form border-0">
-                            <li class="block-item">
-                                <label>付款金额：</label>
-                                <span class="price">￥0.01</span>
-                            </li>
-                            <li class="block-item">
-                                <label>订单编号：</label>
-                                <span>201908291736006609</span>
-                            </li>
-
-                            <li class="block-item">
-                                <label>支付方式：</label>
-                                <span>微信会员卡支付</span>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div>
-
-
-
-            </div>
-
-        </div>
-    </div>
-
-    <div class="footer" style="min-height: 86px;">
-        <div class="copyright">
-            <div style="font-size: 12px;padding: 50px 0 20px;text-align: center;">
-                <a style="color: #999;" href="http://alipay.020leader.com/" target="_blank">移领提供技术支持</a>
-            </div>
-        </div>
-    </div>
-
-    <script type="text/javascript">
-        //禁止下拉
-        document.body.addEventListener('touchmove', function (e) {
-            e.preventDefault()
-        }, { passive: false });
-    </script>
-    <script type="text/javascript">
-        $('.img_click').click(function () {
-            var token = $(this).parent().attr('token');
-            var href = "";
-            $.ajax({
-                type: "post",
-                url: '/wxpay/index.php?g=Wap&m=Payfree&a=adv_split',
-                data: { token: token },
-                dataType: "json",
-                success: function (data) {
-                    if (data.status == 200) {
-                        window.location.href = href;
-                    }
-                }
-            });
-        })
-    </script>
-</body>
-
-</html>
+            }
+        });
+    })
+</script></body></html>
