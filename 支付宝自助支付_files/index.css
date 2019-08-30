@@ -38,11 +38,6 @@ a:hover{}
 	height: 100vh;
 	left: 0;
 	top: 0;
-	pointer-events: none;
-	cursor: default;
-	touch-action: none;
-	z-index: 9999;
-	background: red;
 }
 .bg_blue .container{
 	width:96%;margin:0px auto;background:#1c94f2;padding-top:0.5rem;
