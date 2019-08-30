@@ -17,9 +17,9 @@ a:hover{}
 	min-width:320px;max-width:640px;margin:0px auto;
 }
 .sub{display:none;}
-/* .bg_blue{
+.bg_blue{
 	background:#1c94f2;
-} */
+}
 .bg_blue .ico_suc span{
 	padding-left:1.2rem;
 }
