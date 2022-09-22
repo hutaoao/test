@@ -48,6 +48,7 @@
           console.log(status, result)
           if (status === 'complete' && result.regeocode) {
             console.log('complete')
+            alert(result.regeocode.formattedAddress)
           } else {
             console.error('根据经纬度查询地址失败')
           }
