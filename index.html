@@ -18,7 +18,8 @@
     securityJsCode: 'c5de57fedf6c9186e39f8cdc18c591df',
   }
 </script>
-<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=4349f0ad828ed361f020682f1dc1db4c&plugin=AMap.Geocoder"></script>
+<script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.15&key=4349f0ad828ed361f020682f1dc1db4c&plugin=AMap.Geocoder"></script>
 <script type="text/javascript">
   var map = new AMap.Map('container', {
     resizeEnable: true
@@ -42,8 +43,10 @@
     geolocation.getCurrentPosition(function (status, result) {
       if (status == 'complete') {
         console.log('success', result);
-
-        var lnglat = [119.16176, 36.70686];
+        const lat = result.position.lat;
+        const lng = result.position.lng;
+        var lnglat = [lng, lat];
+        console.log(lnglat)
         geocoder.getAddress(lnglat, function (status, result) {
           console.log(status, result)
           if (status === 'complete' && result.regeocode) {
